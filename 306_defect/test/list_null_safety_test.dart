@@ -6,8 +6,7 @@ import 'package:defect_306/generic_class.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('806 Defect', ()
-  {
+  group('806 Defect', () {
     test('806 Defect', () {
       final json = <String, dynamic>{
         'bind': 'test',
@@ -15,5 +14,5 @@ void main() {
       final bad = BadListNullSafety.fromJson(json);
       print(bad);
     });
-  }
+  });
 }
