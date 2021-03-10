@@ -11,8 +11,7 @@ void main() {
       final json = <String, dynamic>{
         'bind': 'test',
       };
-      final bad = BadListNullSafety.fromJson(json);
-      print(bad);
+      expect(() => BadListNullSafety.fromJson(json), throwsA(isA<TypeError>()));
     });
   });
 }

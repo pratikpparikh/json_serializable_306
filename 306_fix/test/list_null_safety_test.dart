@@ -11,8 +11,9 @@ void main() {
       final json = <String, dynamic>{
         'bind': 'test',
       };
-      final bad = ListNullSafety.fromJson(json);
-      print(bad);
+      final expected = ListNullSafety('test', <ListNullSafety>[]);
+      final good = ListNullSafety.fromJson(json);
+      expect(good.toJson(), expected.toJson());
     });
   });
 }
